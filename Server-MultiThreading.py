@@ -33,6 +33,7 @@ def init(sock):
             connection, client_Address = sock.accept()
             print ('connection from', client_Address) 
             start_new_thread(read,(connection,))
+            start_new_thread(write,(connection,"connected",))
             start_new_thread(write,(connection,"vacant:4",))
     
     
