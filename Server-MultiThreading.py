@@ -49,11 +49,12 @@ def init(sock):
             
 sock = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
 print(socket.gethostname())
-server_address = ('192.168.31.13',10000)
+server_address = ('192.168.43.103',10000)
 print ("starting up on %s port %s" % server_address)
 sock.bind(server_address)
 sock.listen(10)
 start_new_thread(init,(sock,))
+
 
 
     
